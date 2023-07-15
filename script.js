@@ -2,16 +2,18 @@ let texto = document.getElementById("enlace");
 let boton = document.getElementById("submit-btn");
 let ulResult = document.getElementById("ul-result");
 let spin = document.getElementById("spin");
+let urlReal = "https://tyronevs.pythonanywhere.com/url/"
+let urlPrueba = "http://127.0.0.1:5000/url/"
 
 let peticion = async () => {
   link = texto.value.trim()
   if (link == "") {
-    alert("Ingrese una url");
+    return alert("Ingrese una url");
   }
   spin.classList.remove("hidden");
   spin.classList.add("visible");
   ulResult.innerHTML = "";
-  const url = "https://tyronevs.pythonanywhere.com/url/" + link;
+  const url = urlPrueba + link;
   //createToast("success");
   await fetch(url, { method: "GET" })
     .then((response) => {
