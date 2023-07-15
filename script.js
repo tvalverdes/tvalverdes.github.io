@@ -17,7 +17,6 @@ let peticion = async () => {
   //createToast("success");
   await fetch(url, { method: "GET" })
     .then((response) => {
-      console.log(response);
       if (response.status !== 200) {
         throw new Error(
           "Error en la solicitud. Código de estado: " + response.status
