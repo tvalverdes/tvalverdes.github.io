@@ -7,6 +7,7 @@ let peticion = async () => {
   link = texto.value.trim()
   if (link == "") {
     alert("Ingrese una url");
+    return
   }
   spin.classList.remove("hidden");
   spin.classList.add("visible");
