@@ -13,7 +13,7 @@ let peticion = async () => {
   spin.classList.remove("hidden");
   spin.classList.add("visible");
   ulResult.innerHTML = "";
-  const url = urlReal + link;
+  let url = urlReal+link;
   //createToast("success");
   await fetch(url, { method: "GET" })
     .then((response) => {
