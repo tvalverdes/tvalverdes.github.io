@@ -18,7 +18,7 @@ let peticion = async () => {
   spin.classList.add("visible");
   ulResult.innerHTML = "";
   ulCaracteristica.innerHTML = "";
-  const url = urlPrueba + link;
+  const url = urlReal + link;
   //createToast("success");
   await fetch(url, { method: "GET" })
     .then((response) => {
